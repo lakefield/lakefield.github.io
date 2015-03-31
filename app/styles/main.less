@@ -1,0 +1,191 @@
+@import "../../bower_components/bootstrap/less/glyphicons.less";
+@import "../../bower_components/bootstrap/less/grid.less";
+@import "../../bower_components/bootstrap/less/mixins.less";
+@import "../../bower_components/bootstrap/less/normalize.less";
+@import "../../bower_components/bootstrap/less/scaffolding.less";
+@import "../../bower_components/bootstrap/less/type.less";
+@import "../../bower_components/bootstrap/less/variables.less";
+
+/**********************
+  VARIABLES
+**********************/
+
+@icon-font-path: "../fonts/glyphicons/";
+@font-color: #eee;
+@link-color: #c0c0c0;
+@main-txt-shadow: 0px 1px rgba(0,0,0,1);
+
+/**********************
+  CORE
+**********************/
+
+html, body {
+  height: 100%;
+}
+
+body {
+  #gradient > .radial(#444; #111);
+  color: @font-color;
+  text-shadow: @main-txt-shadow;
+}
+
+h1 {
+  font-size: 3.5em;
+}
+
+h1 q {
+  position: absolute;
+  font-size: 0.4em;
+  font-weight: normal;
+  color: rgba(255,255,255,0.5);
+  transform: rotate(45deg);
+}
+
+h1, h2, p {
+  font-weight: 300;
+  text-align: center;
+}
+
+a {
+  line-height: 1em;
+  color: @link-color;
+  transition: text-shadow 0.5s ease;
+}
+
+a:hover {
+  text-decoration: none;
+  color: @link-color;
+  text-shadow: 0px 1em rgba(0,0,0,0.2);
+}
+
+a:active, a:focus {
+  text-decoration: none;
+  color: @link-color;
+}
+
+/**********************
+  MAIN
+**********************/
+
+#main {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#main .inner {
+  width: 100%;
+  padding: 20px;
+}
+
+.glyphicon {
+  top: 2px;
+  color: #222;
+  text-shadow: 1px 1px #444;
+}
+
+.blueflame, .blueflame:hover, .glyphicon-fire {
+  color: #00bff3;
+}
+
+.glyphicon-fire {
+  text-shadow: @main-txt-shadow;
+}
+
+.no-wrap {
+  white-space: nowrap;
+}
+
+/**********************
+  ANIMATIONS
+**********************/
+
+.reveal-in {
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.reveal-in-fast {
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
+.reveal-up {
+  opacity: 0;
+  -webkit-animation: fadeUp ease-in-out 1;
+  animation: fadeUp ease-in-out 1;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.reveal-first {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.reveal-second {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+.reveal-third {
+  -webkit-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.reveal-fourth {
+  -webkit-animation-delay: 2s;
+  animation-delay: 2s;
+}
+
+.reveal-fifth {
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
+.reveal-last {
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; } 
+}
+
+@keyframes fadeIn {   
+  0% { opacity: 0; }
+  100% { opacity: 1; }  
+}
+
+@-webkit-keyframes fadeUp {
+  0% { 
+    opacity: 0; 
+    -webkit-transform: translate3d(0, 100px, 0);
+            transform: translate3d(0, 100px, 0);
+  }
+  100% { opacity: 1; } 
+}
+
+@keyframes fadeUp {   
+  0% { 
+    opacity: 0; 
+    -webkit-transform: translate3d(0, 100px, 0);
+            transform: translate3d(0, 100px, 0);
+  }
+  100% { opacity: 1; }  
+}
